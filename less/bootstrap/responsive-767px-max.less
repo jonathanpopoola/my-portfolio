@@ -1,0 +1,532 @@
+//
+// Responsive: Landscape phone to desktop/tablet
+// --------------------------------------------------
+
+
+@media (max-width: 767px) {
+
+.contactBody {
+        background: transparent !important;
+      }
+
+    .contact {
+      padding-top: 30px !important;
+      .opaqueBack {
+        border-radius: 0px !important;
+        h1, p {
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+        color: #4d4d4d;
+              }
+        }
+        
+      .lm {
+        margin-left: 10px !important;
+      }
+      
+      .checkbox {
+        width: 90%;
+        color: #4d4d4d !important;
+      }
+      
+      
+      
+      .inputController {
+        margin-left: 10px;
+        input, textarea {
+          width: 90%;
+        }
+      }
+      .jpButton {
+        margin: 10px !important;
+        color: #fff !important;
+      }
+      .opaqueBack {
+        background: transparent !important;
+      }
+      label, a {
+        color : #4d4d4d !important;
+      }
+  }
+
+  // Padding to set content in a bit
+  body {
+    //padding-left: 20px;
+    //padding-right: 20px;
+    
+  }
+  
+  // moving padding to header to allow for full screen colour on containers
+  
+  .about {
+    p,h3 {
+      margin-left: 20px !important;
+      margin-right: 20px !important;
+    }
+  }
+  
+  .progress {
+     margin-left: 20px !important;
+      margin-right: 20px !important;
+  }
+  
+  #header {
+    padding: 0px 20px 0px 20px;
+  }
+  
+  .navbar-fixed-top {
+    margin-bottom: 0px !important;
+    background: #000;
+  }
+  
+  .navbar .brand {
+    padding-top: 10px; 
+  }
+  
+  #mainContainer {
+    
+  }
+  
+  .navbar-inner {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  
+  // Negative indent the now static "fixed" navbar
+  .navbar-fixed-top,
+  .navbar-fixed-bottom,
+  .navbar-static-top {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  // Remove padding on container given explicit padding set on body
+  .container-fluid {
+    padding: 0;
+  }
+
+  // TYPOGRAPHY
+  // ----------
+  // Reset horizontal dl
+  .dl-horizontal {
+    dt {
+      float: none;
+      clear: none;
+      width: auto;
+      text-align: left;
+    }
+    dd {
+      margin-left: 0;
+    }
+  }
+
+  // GRID & CONTAINERS
+  // -----------------
+  // Remove width from containers
+  .container {
+    width: auto;
+  }
+  // Fluid rows
+  .row-fluid {
+    width: 100%;
+  }
+  // Undo negative margin on rows and thumbnails
+  .row,
+  .thumbnails {
+    margin-left: 0;
+  }
+  .thumbnails > li {
+    float: none;
+    margin-left: 0; // Reset the default margin for all li elements when no .span* classes are present
+  }
+  // Make all grid-sized elements block level again
+  [class*="span"],
+  .uneditable-input[class*="span"], // Makes uneditable inputs full-width when using grid sizing
+  .row-fluid [class*="span"] {
+    float: none;
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    .box-sizing(border-box);
+  }
+  .span12,
+  .row-fluid .span12 {
+    width: 100%;
+    .box-sizing(border-box);
+  }
+  .row-fluid [class*="offset"]:first-child {
+    margin-left: 0;
+  }
+
+  // FORM FIELDS
+  // -----------
+  // Make span* classes full width
+  .input-large,
+  .input-xlarge,
+  .input-xxlarge,
+  input[class*="span"],
+  select[class*="span"],
+  textarea[class*="span"],
+  .uneditable-input {
+    .input-block-level();
+  }
+  // But don't let it screw up prepend/append inputs
+  .input-prepend input,
+  .input-append input,
+  .input-prepend input[class*="span"],
+  .input-append input[class*="span"] {
+    display: inline-block; // redeclare so they don't wrap to new lines
+    width: auto;
+  }
+  .controls-row [class*="span"] + [class*="span"] {
+    margin-left: 0;
+  }
+
+  // Modals
+  .modal {
+    position: fixed;
+    top:   20px;
+    left:  20px;
+    right: 20px;
+    width: auto;
+    margin: 0;
+    &.fade  { top: -100px; }
+    &.fade.in { top: 20px; }
+  }
+
+}
+
+
+
+// UP TO LANDSCAPE PHONE
+// ---------------------
+
+@media (max-width: 480px) {
+
+  // Smooth out the collapsing/expanding nav
+  .nav-collapse {
+    -webkit-transform: translate3d(0, 0, 0); // activate the GPU
+  }
+
+  // Block level the page header small tag for readability
+  .page-header h1 small {
+    display: block;
+    line-height: @baseLineHeight;
+  }
+
+  // Update checkboxes for iOS
+  input[type="checkbox"],
+  input[type="radio"] {
+    border: 1px solid #ccc;
+  }
+
+  // Remove the horizontal form styles
+  .form-horizontal {
+    .control-label {
+      float: none;
+      width: auto;
+      padding-top: 0;
+      text-align: left;
+    }
+    // Move over all input controls and content
+    .controls {
+      margin-left: 0;
+    }
+    // Move the options list down to align with labels
+    .control-list {
+      padding-top: 0; // has to be padding because margin collaspes
+    }
+    // Move over buttons in .form-actions to align with .controls
+    .form-actions {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  // Medias
+  // Reset float and spacing to stack
+  .media .pull-left,
+  .media .pull-right  {
+    float: none;
+    display: block;
+    margin-bottom: 10px;
+  }
+  // Remove side margins since we stack instead of indent
+  .media-object {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  // Modals
+  .modal {
+    top:   10px;
+    left:  10px;
+    right: 10px;
+  }
+  .modal-header .close {
+    padding: 10px;
+    margin: -10px;
+  }
+
+  // Carousel
+  .carousel-caption {
+    position: static;
+  }
+  
+  .homeImage {
+    padding-top: 0px !important;
+  }
+  
+ 
+ .homeText {
+    font-size: 1.6em !important; 
+  }
+  
+  .howIText {
+    font-size: 1.5em !important;
+    margin-left: 10px;
+    margin-right: 10px;  
+  }
+  
+  .howIWork {
+    padding-top: 40px !important;
+    height: 110px !important;
+  }
+  
+  .intro {
+    padding-top: 40px !important;
+    height: 420px !important;
+  }
+  
+  .jpStanText {
+    font-size: 1.5em !important;
+  }
+  
+  .jpStanTextSmaller {
+    margin-bottom: 30px !important;
+    
+  }
+  
+  #jpFooter {
+    height: 120px !important; 
+    text-align: left !important;
+    h4 {
+      margin-left: 10px !important;
+    }
+    p {
+      margin-left: 10px !important;
+    }
+  }
+  
+  .skills {
+    h3 {
+      margin-left: 10px !important;
+    }
+    p {
+      margin-left: 10px !important;
+      margin-right: 10px !important;
+    }
+    .centerImg {
+      margin: 10px 0px 10px 0px !important;
+    }
+    ul {
+      margin-left: 10px !important;
+      margin-right: 10px !important;
+      margin-bottom: 20px !important;
+    }
+  }
+  
+  .how {
+    .skills;
+  }
+  
+  .portfolioHeader {
+    padding-top: 40px !important;
+    height: 440px !important;
+  }
+  
+  .topMargin {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
+  
+  .forphone {
+    margin-bottom: 5px !important;
+  }
+  
+  .project {
+    width: 100% !important;
+    padding: 0px !important;
+    margin: 0px 0px 20px 0px!important;
+    margin-right: 0px !important;
+    box-shadow: none !important;
+    border-bottom: 1px solid #d6d6d6;
+    height: 340px !important;
+    float: left;
+    .project-image {
+      width: 80% !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      float: none;
+      display: inline-block;
+    }
+    .top {
+      height: 310px !important;
+    }
+    .bottom {
+      height: 30px !important;
+      a {
+        margin-top: 0px !important;
+      }
+    }
+    .projectDescription {
+      margin: 10px !important;
+    }
+    p, h3 {
+      float: left;
+    }
+    
+  }
+  
+  .fiftyPercent {
+    width: 90% !important;
+    font-size: 12px !important;
+    input {
+      width: 100% !important;
+    }
+    h3 {
+      margin-top: 0px !important;
+    }
+    .pushbut {
+      margin-top: 5px !important;
+      margin-bottom: 5px;
+    }
+    #logmein {
+      clear: left;
+    }
+  }
+  
+ 
+
+}
+
+@media only screen and (max-device-width: 480px) and (orientation : landscape) {
+   .homeText {
+    font-size: 1.6em !important; 
+  }
+  
+  .howIText {
+    font-size: 1.5em !important;
+    margin-left: 10px;
+    margin-right: 10px;  
+  }
+  
+  .howIWork {
+    padding-top: 40px !important;
+    height: 110px !important;
+  }
+  
+  .intro {
+    padding-top: 40px !important;
+    height: 420px !important;
+  }
+  
+  .jpStanText {
+    font-size: 1.5em !important;
+  }
+  
+  .jpStanTextSmaller {
+    margin-bottom: 30px !important;
+    
+  }
+  
+  #jpFooter {
+    text-align: left !important;
+    h4 {
+      margin-left: 10px !important;
+    }
+    p {
+      margin-left: 10px !important;
+    }
+  }
+  
+  .skills {
+    h3 {
+      margin-left: 10px !important;
+    }
+    p {
+      margin-left: 10px !important;
+      margin-right: 10px !important;
+    }
+    .centerImg {
+      margin: 10px 0px 10px 0px !important;
+    }
+    ul {
+      margin-left: 10px !important;
+      margin-right: 10px !important;
+    }
+  }
+  
+  .how {
+    .skills;
+  }
+  
+    .forphone {
+    margin-bottom: 5px !important;
+  }
+  
+  .project {
+    width: 100% !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    margin-right: 0px !important;
+    box-shadow: none !important;
+    border-bottom: 1px solid #d6d6d6;
+    height: 340px !important;
+    
+    float: left;
+    .project-image {
+      width: 80% !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      float: none;
+      display: inline-block;
+    }
+    .top {
+      height: 300px !important;
+    }
+    .bottom {
+      height: 30px !important;
+      a {
+        margin-top: 10px !important;
+      }
+    }
+    .projectDescription {
+      margin: 10px !important;
+    }
+    p, h3 {
+      float: left;
+    }
+    
+  }
+  
+  .fiftyPercent {
+    width: 100% !important;
+    font-size: 12px !important;
+    input {
+      width: 94% !important;
+    }
+    h3 {
+      margin-top: 0px !important;
+    }
+    .pushbut {
+      margin-top: 5px !important;
+      margin-bottom: 5px;
+    }
+    #logmein {
+      clear: left;
+    }
+  }
+  
+
+  
+}
